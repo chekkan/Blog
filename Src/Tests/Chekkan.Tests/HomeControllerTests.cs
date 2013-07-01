@@ -6,11 +6,23 @@ namespace Chekkan.Tests
 {
     public class HomeControllerTests
     {
+        private HomeController sut;
+
+        public HomeControllerTests()
+        {
+            sut = new HomeController();
+        }
+
         [Fact]
         public void SutIsaController()
         {
-            var sut = new HomeController();
             Assert.IsAssignableFrom<Controller>(sut);
+        }
+
+        [Fact]
+        public void IndexMethodReturnsAViewResult()
+        {
+            Assert.IsAssignableFrom<ViewResult>(sut.Index());
         }
     }
 }
