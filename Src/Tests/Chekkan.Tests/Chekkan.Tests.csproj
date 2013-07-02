@@ -49,12 +49,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\App\Chekkan.Blog.Web\Chekkan.Blog.Web.csproj">
-      <Project>{97903632-6D29-415C-B705-CCEC78138EEE}</Project>
-      <Name>Chekkan.Blog.Web</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
