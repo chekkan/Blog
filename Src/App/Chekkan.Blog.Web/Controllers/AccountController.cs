@@ -10,9 +10,9 @@ namespace Chekkan.Blog.Web.Controllers
         }
 
         [HttpPost]
-        public ViewResult Login(string Email, string Password)
+        public ActionResult Login(string email, string password)
         {
-            throw new System.NotImplementedException();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
