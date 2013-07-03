@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using Xunit;
 using Chekkan.Blog.Web.Controllers;
+using System.Linq;
 
 namespace Chekkan.Blog.Tests
 {
@@ -18,6 +19,18 @@ namespace Chekkan.Blog.Tests
         {
             var sut = new AccountController();
             Assert.IsAssignableFrom<ViewResult>(sut.Login());
+        }
+
+        [Fact]
+        public void LoginMethodOverrideIsDecoratedWithHttpPostAttribute()
+        {
+            var method = typeof(AccountController)
+                .GetMethod("Login", new System.Type[] { typeof(string), typeof(string) });
+            var attribute = method.GetCustomAttributes(typeof(HttpPostAttribute), false)
+                .Cast<HttpPostAttribute>()
+                .SingleOrDefault();
+
+            Assert.NotNull(attribute);
         }
     }
 }

@@ -8,5 +8,11 @@ namespace Chekkan.Blog.Web.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ViewResult Login(string Email, string Password)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
