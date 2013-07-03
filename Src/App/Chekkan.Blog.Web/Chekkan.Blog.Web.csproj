@@ -113,6 +113,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IUserService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -150,6 +151,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chekkan.Blog.Core\Chekkan.Blog.Core.csproj">
+      <Project>{671A4144-EACF-4EE0-A5B7-88896EA94988}</Project>
+      <Name>Chekkan.Blog.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chekkan.Blog.Data\Chekkan.Blog.Data.csproj">
+      <Project>{E681F619-CDFC-4060-966D-1EDBB0DE9A06}</Project>
+      <Name>Chekkan.Blog.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

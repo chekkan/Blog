@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chekkan.Blog.Web", "Src\App
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chekkan.Blog.Tests", "Src\Tests\Chekkan.Blog.Tests\Chekkan.Blog.Tests.csproj", "{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chekkan.Blog.Data", "Src\App\Chekkan.Blog.Data\Chekkan.Blog.Data.csproj", "{E681F619-CDFC-4060-966D-1EDBB0DE9A06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chekkan.Blog.Core", "Src\App\Chekkan.Blog.Core\Chekkan.Blog.Core.csproj", "{671A4144-EACF-4EE0-A5B7-88896EA94988}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E681F619-CDFC-4060-966D-1EDBB0DE9A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E681F619-CDFC-4060-966D-1EDBB0DE9A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E681F619-CDFC-4060-966D-1EDBB0DE9A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E681F619-CDFC-4060-966D-1EDBB0DE9A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{671A4144-EACF-4EE0-A5B7-88896EA94988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671A4144-EACF-4EE0-A5B7-88896EA94988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671A4144-EACF-4EE0-A5B7-88896EA94988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671A4144-EACF-4EE0-A5B7-88896EA94988}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

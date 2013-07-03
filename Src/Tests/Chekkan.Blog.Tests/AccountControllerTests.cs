@@ -1,24 +1,36 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using Xunit;
 using Chekkan.Blog.Web.Controllers;
 using System.Linq;
 using Xunit.Extensions;
+using Chekkan.Blog.Core;
+using Moq;
 
 namespace Chekkan.Blog.Tests
 {
     public class AccountControllerTests
     {
         private AccountController sut;
+        private Mock<IUserService> mockUserService;
 
         public AccountControllerTests()
         {
-            sut = new AccountController();
+            mockUserService = new Mock<IUserService>();
+            sut = new AccountController(mockUserService.Object);
         }
 
         [Fact]
         public void SutIsaController()
         {
             Assert.IsAssignableFrom<Controller>(sut);
+        }
+
+        [Fact]
+        public void SutThrowsExceptionForNullUserService()
+        {
+            ArgumentNullException ex = Assert.Throws<ArgumentNullException>( () => new AccountController(null));
+            Assert.Equal("userService", ex.ParamName);
         }
 
         [Fact]
@@ -52,6 +64,8 @@ namespace Chekkan.Blog.Tests
             string email,
             string password)
         {
+            mockUserService.Setup(u => u.IsValid(email, password)).Returns(true);
+
             ActionResult result = sut.Login(email, password);
 
             var redirectResult = (RedirectToRouteResult)result;
@@ -68,6 +82,8 @@ namespace Chekkan.Blog.Tests
             string email,
             string password)
         {
+            mockUserService.Setup(u => u.IsValid(email, password)).Returns(false);
+
             var result = sut.Login(email, password);
             var viewResult = (ViewResult)result;
             
