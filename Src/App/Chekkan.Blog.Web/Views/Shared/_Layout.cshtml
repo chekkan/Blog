@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <h1>Chekkan Blog</h1>
+
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Login", "Login", "Account")</li>
+        </ul>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
