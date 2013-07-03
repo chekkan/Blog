@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chekkan.Tests", "Src\Tests\Chekkan.Tests\Chekkan.Tests.csproj", "{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chekkan.Blog.Web", "Src\App\Chekkan.Blog.Web\Chekkan.Blog.Web.csproj", "{C887490D-681F-4F9A-A75B-C187A13F3A01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chekkan.Blog.Tests", "Src\Tests\Chekkan.Blog.Tests\Chekkan.Blog.Tests.csproj", "{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C887490D-681F-4F9A-A75B-C187A13F3A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C887490D-681F-4F9A-A75B-C187A13F3A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C887490D-681F-4F9A-A75B-C187A13F3A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C887490D-681F-4F9A-A75B-C187A13F3A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F80CEE0-9693-4DDC-BA4F-FD9FD0BC7F65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

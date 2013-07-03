@@ -2,7 +2,7 @@
 using Chekkan.Blog.Web.Controllers;
 using System.Web.Mvc;
 
-namespace Chekkan.Tests
+namespace Chekkan.Blog.Tests
 {
     public class HomeControllerTests
     {
