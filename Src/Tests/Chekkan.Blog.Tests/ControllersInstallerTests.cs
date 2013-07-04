@@ -51,6 +51,16 @@ namespace Chekkan.Blog.Tests
         }
 
         [Fact]
+        public void All_controllers_expose_themselves_as_service()
+        {
+            var controllersWithWrongName = GetHandlersFor(typeof(IController), containerWithControllers)
+                .Where(
+                    controller =>
+                        controller.ComponentModel.Services.Single() != controller.ComponentModel.Implementation);
+            Assert.Empty(controllersWithWrongName);
+        }
+
+        [Fact]
         public void All_and_only_controllers_have_Controllers_suffix()
         {
             var allControllers = GetPublicClassesFromApplicationAssembly(c => c.Name.EndsWith("Controller"));
