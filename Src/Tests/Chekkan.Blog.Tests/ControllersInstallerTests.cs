@@ -7,6 +7,7 @@ using Xunit;
 using Chekkan.Blog.Web.Controllers;
 using System.Linq;
 using Chekkan.Blog.Web.Installers;
+using Castle.Core;
 
 namespace Chekkan.Blog.Tests
 {
@@ -38,6 +39,15 @@ namespace Chekkan.Blog.Tests
             var allControllers = GetPublicClassesFromApplicationAssembly(c => c.Is<IController>());
             var registeredControllers = GetImplementationTypesFor(typeof(IController), containerWithControllers);
             Assert.Equal(allControllers, registeredControllers);
+        }
+
+        [Fact]
+        public void All_controllers_are_transient()
+        {
+            var nonTransientControllers = GetHandlersFor(typeof(IController), containerWithControllers)
+                .Where(controller => controller.ComponentModel.LifestyleType != LifestyleType.Transient)
+                .ToArray();
+            Assert.Empty(nonTransientControllers);
         }
 
         [Fact]

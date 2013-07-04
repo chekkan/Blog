@@ -10,7 +10,8 @@ namespace Chekkan.Blog.Web.Installers
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container.Register(Classes.FromThisAssembly()
-                .BasedOn<IController>());
+                .BasedOn<IController>()
+                .LifestyleTransient());
         }
     }
 }
