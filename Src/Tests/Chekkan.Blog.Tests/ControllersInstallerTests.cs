@@ -40,6 +40,22 @@ namespace Chekkan.Blog.Tests
             Assert.Equal(allControllers, registeredControllers);
         }
 
+        [Fact]
+        public void All_and_only_controllers_have_Controllers_suffix()
+        {
+            var allControllers = GetPublicClassesFromApplicationAssembly(c => c.Name.EndsWith("Controller"));
+            var registeredControllers = GetImplementationTypesFor(typeof(IController), containerWithControllers);
+            Assert.Equal(allControllers, registeredControllers);
+        }
+
+        [Fact]
+        public void All_and_only_controllers_live_in_Controllers_namespace()
+        {
+            var allControllers = GetPublicClassesFromApplicationAssembly(c => c.Namespace.Contains("Controllers"));
+            var registeredControllers = GetImplementationTypesFor(typeof(IController), containerWithControllers);
+            Assert.Equal(allControllers, registeredControllers);
+        }
+
         private Type[] GetImplementationTypesFor(Type type, IWindsorContainer container)
         {
             return GetHandlersFor(type, container)
